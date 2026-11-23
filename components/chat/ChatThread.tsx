@@ -173,6 +173,7 @@ function Composer() {
           id="composer"
           ref={ref}
           rows={1}
+          autoComplete="off"
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {

@@ -142,6 +142,7 @@ function ChecklistCard({ list }: { list: Checklist }) {
         </label>
         <input
           id={`add-${list.id}`}
+          autoComplete="off"
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
           placeholder="Add item"
@@ -200,6 +201,8 @@ function NumberCell({
       <input
         type="number"
         inputMode="decimal"
+        autoComplete="off"
+        name={`cost-${label}`}
         aria-label={label}
         min={min}
         step={step}
@@ -232,6 +235,8 @@ function CostRow({ cost }: { cost: Cost }) {
       <td className="py-1 pl-1">
         <input
           aria-label="Item"
+          autoComplete="off"
+          name={`cost-label-${cost.id}`}
           value={cost.label}
           onChange={(e) => update({ label: e.target.value })}
           className="h-8 w-full min-w-0 rounded-md border border-transparent bg-transparent px-2 text-[13px] font-medium outline-none hover:border-line focus:border-accent/50 focus:bg-surface focus-visible:outline-none"
